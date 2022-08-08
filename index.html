@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptador de texto | Challenge ONE</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="encrypt-container">
+            <div class="logo">
+                <img src="img/a.svg" alt="">
+            </div>
+            <div class="title">
+                <p>> ENCRIPTADOR <</p>
+            </div>
+            <div class="text-collector">
+                <textarea class="text-input" id="textInput" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="text-result">
+                <div class="card">
+                    <div class="without-text" id="withoutText">
+                        <div class="find-img" id="findImg">
+                            <img src="img/find.svg" alt="">
+                        </div>
+                        <div class="no-message">
+                            <p class="message">Ningún mensaje fue encontrado</p>
+                        </div>
+                        <div class="input-message">
+                            <p class="place-holder">Ingresa el texto que deseas encriptar o desencriptar</p>
+                        </div>    
+                    </div>
+                    <div class="with-text" id="withText">
+                        <div class="text-container">
+                            <textarea class="text-encrypted" id="textEncrypted" cols="40" rows="30"></textarea>
+                        </div>
+                        <div class="copy">
+                            <button type="button" class="copy-button" id="copyButton" onclick="copy()">Copiar</button>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-area">
+                <div class="disclaimer">
+                    <img clas="img-sign" src="img/sign.svg" alt="">
+                    <h1 class="text-sign">Sólo letras minúsculas y sin acentos</h1>    
+                </div>
+                <div class="buttons-container">
+                    <button type="button" class="left-button" id="encryptButton" onclick="encrypt()">Encriptar</button>
+                    <button type="button" class="right-button" id="decryptButton" onclick="decrypt()">Desencriptar</button>    
+                </div>    
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Developed by: <a href="https://github.com/GaiskaSalomon">Gaiska Salomon</a></p>
+    </footer>
+</body>
+<script src="js/encrypt.js"></script>
+</html>

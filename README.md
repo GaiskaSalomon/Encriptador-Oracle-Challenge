@@ -42,7 +42,7 @@ Por ejemplo:
 
 ## Video de uso del encriptador
 
-![encriptador](https://user-images.githubusercontent.com/12477845/183521867-3e5d9699-4f0f-48b2-a903-80b4e008c25a.gif)
+
 
 ---
 

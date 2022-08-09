@@ -3,9 +3,7 @@
 ## Construcción de un encriptador de texto con JavaScript
 
 
-<p><a href="https://gaiskasalomon.github.io/Encriptador-Oracle-Challenge/">E N C R I P T A D O R   D E   T E X T O</a></p>
-
-Durante estas cuatro semanas, vamos a trabajar en una aplicación que encripta textos, así podrás intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada.
+Aplicación que encripta textos, así podrás intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada.
 
 Las “llaves” de encriptación que utilizaremos son las siguientes:
 
@@ -42,6 +40,9 @@ Por ejemplo:
 
 ## Video de uso del encriptador
 
+<p><a href="https://gaiskasalomon.github.io/Encriptador-Oracle-Challenge/">E N C R I P T A D O R   D E   T E X T O</a></p>
+
+![encriptador](https://user-images.githubusercontent.com/12477845/183543791-59fa6b47-439a-487d-a885-9479db2d29eb.gif)
 
 
 ---

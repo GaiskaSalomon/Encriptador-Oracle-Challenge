@@ -1,8 +1,8 @@
 function encrypt(){
     var text = document.getElementById('textInput').value;
 
-    if(/[A-Z]/.test(text) || (/á, é, í, ó, ú/.test(text))){
-        alert('El texto no puede contener mayúsculas ni acentos. Favor de corregir el texto, gracias');
+    if(/[A-Z]/.test(text) || /[Á-ú]/.test(text) || /^\s/.test(text)){
+        alert('El texto no puede comenzar con espacio en blanco como primer caracter, no puede contener mayúsculas ni acentos. Favor de corregir el texto, gracias.');
         return;
     }
 
@@ -24,7 +24,7 @@ function encrypt(){
 }  
 
 function decrypt(){
-    var text = document.getElementById('textInput').value.toLowerCase();
+    var text = document.getElementById('textInput').value;
 
     if(text == ''){
         document.getElementById('withoutText').style.display = 'flex';
@@ -46,6 +46,11 @@ function decrypt(){
 function copy(){
     var content = document.querySelector('#textEncrypted');
     content.select();
-    document.execCommand('copy');
-
+    if (content == ''){
+        alert('Favor de copiar texto cifrado, gracias.');
+        return;
+    }else{
+        document.execCommand('copy');
+        document.getElementById('textInput').innerHTML = '';    
+    }
 }

@@ -11,46 +11,41 @@ function encrypt(){
         document.getElementById('withText').style.display = 'none';
         return;
     }else{
-        var encryptText = text.replace(/e/igm, 'enter');
-        var encryptText = encryptText.replace(/i/igm, 'imes');
-        var encryptText = encryptText.replace(/a/igm, 'ai');
-        var encryptText = encryptText.replace(/o/igm, 'ober');
-        var encryptText = encryptText.replace(/u/igm, 'ufat');
+        var encryptedText = text.replace(/e/igm, 'enter');
+        var encryptedText = encryptedText.replace(/i/igm, 'imes');
+        var encryptedText = encryptedText.replace(/a/igm, 'ai');
+        var encryptedText = encryptedText.replace(/o/igm, 'ober');
+        var encryptedText = encryptedText.replace(/u/igm, 'ufat');
     }
 
     document.getElementById('withoutText').style.display = 'none';
     document.getElementById('withText').style.display = 'flex';
-    document.getElementById('textEncrypted').innerHTML = encryptText;
+    document.getElementById('textEncrypted').innerHTML = encryptedText;
 }  
 
 function decrypt(){
-    var text = document.getElementById('textInput').value;
+    var encryptedText = document.getElementById('textEncrypted').value;
 
-    if(text == ''){
+    if(encryptedText == ''){
         document.getElementById('withoutText').style.display = 'flex';
         document.getElementById('withText').style.display = 'none';
         return;
     }else{
-        var encryptText = text.replace(/enter/igm, 'e');
-        var encryptText = encryptText.replace(/imes/igm, 'i');
-        var encryptText = encryptText.replace(/ai/igm, 'a');
-        var encryptText = encryptText.replace(/ober/igm, 'o');
-        var encryptText = encryptText.replace(/ufat/igm, 'u');
+        var text = encryptedText.replace(/enter/igm, 'e');
+        var text = text.replace(/imes/igm, 'i');
+        var text = text.replace(/ai/igm, 'a');
+        var text = text.replace(/ober/igm, 'o');
+        var text = text.replace(/ufat/igm, 'u');
     }
 
-    document.getElementById('withoutText').style.display = 'none';
-    document.getElementById('withText').style.display = 'flex';
-    document.getElementById('textEncrypted').innerHTML = encryptText;   
+    document.getElementById('textEncrypted').innerHTML = text;   
 }
 
 function copy(){
-    var content = document.querySelector('#textEncrypted');
-    content.select();
-    if (content == ''){
-        alert('Favor de copiar texto cifrado, gracias.');
-        return;
-    }else{
-        document.execCommand('copy');
-        document.getElementById('textInput').innerHTML = '';    
-    }
+    var encryptedText = document.querySelector('#textEncrypted');
+    encryptedText.select();
+    document.execCommand('copy');
+    document.getElementById('textInput').value = '';
+    document.getElementById('textInput').placeholder = 'Favor de pegar el texto cifrado que copiaste';  
+    console.log(encryptedText); 
 }
